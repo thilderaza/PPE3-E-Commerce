@@ -1,0 +1,22 @@
+/* Mise en page du site */
+
+.header{
+
+    color: #ace600;
+    padding: 20px 30px;
+    margin: auto;
+    max-width: 940px;
+    
+}
+
+.body{
+    display: block;
+    color: #ace666;
+}
+
+.footer > div > p{
+    
+    background-color: rgb(187, 16, 16);
+
+}
+
