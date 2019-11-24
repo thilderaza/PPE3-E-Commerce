@@ -21,7 +21,7 @@ class Client extends DB {
   
   function add($tblemp){
     
-    $strSQL = "INSERT INTO client (nom_cli,pnom_cli,age_cli,mail_cli,mdp_cli) VALUES (UCASE(?),UCASE(?),UCASE(?),UCASE(?),UCASE(?))";
+    $strSQL = "INSERT INTO client (nom_cli,pnom_cli,age_cli,mail_cli,mdp_cli) VALUES (UCASE(?),UCASE(?),UCASE(?),UCASE(?),md5(UCASE(?)))";
     $tblValeur = array(
       $tblemp['prenom'],
       $tblemp['nom'],
