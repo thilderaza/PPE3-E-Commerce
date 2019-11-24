@@ -2,32 +2,56 @@
 
 <html lang="fr">
 
-	<head >
+	<head>
 		<meta charset="utf-8">
-		<title>La tanière de l'hermite</title>
-		<link rel="stylesheet" href="../css/style.css">
-
+		<title ><?= $titre ?></title>
+		<link rel="stylesheet" href="style.css">
+        
+        <div id="fond"> 
+            <div class="ruban">     
+                <h2> La tanière de l'Hermite !</h2>     
+            </div>     
+            <div class="ruban_gauche"></div>
+            <div class="ruban_droit"></div>
+        </div>
+        <div>
+				<nav class= "topnav">  
+					<ul>
+						<a class="active" href="index.php?action=Accueil">Accueil</a>
+						<a href="index.php?action=livre">Livres</a>
+						<a href="index.php?action=liseuses">Liseuses</a>
+						<a href="index.php?action=ebook">E-Book</a>
+						<a href="index.php?action=accessoire">Accessoires</a>
+							<div class="subnav">
+								<a class="subnavbtn">Compte</a>
+								<div class="subnav-content">
+								<a href="index.php?action=inscription">Inscription</a>
+								<a href="index.php?action=Admin">Connexion</a>
+								<a href="index.php?action=deconnexion">Déconnexion</a>
+								</div>
+							</div>		
+                        <input type="text" placeholder="Search..">
+					</ul>
+				</nav>
+			</div>
 	</head>
 
-	<?php
-	include "header.php";
-	?>
-
-	<body class="body">
-		<nav>  
-			<ul>
-				<li><a href="#">Accueil</a></li>
-				<li><a href="#">Livres</a></li>
-				<li><a href="#">Liseuses</a></li>
-				<li><a href="#">E-Book</a></li>
-				<li><a href="#">Accessoires</a></li>
-				<li><a href="#">Compte</a></li>
-			</ul>
-		</nav>
+	<body >
+    <section>
+			<div>				
+			<h1><strong><?= $titre ?></strong></h1> 
+			</div>
+		</section>
+		<section id="pageContent">
+        	<?= $contenu ?>  <!-- Élément spécifique -->
+    	</section>
 	</body>
 	
-    <?php
-	include "footer.php";
-	?>
+    <footer >
+		<div class="footer">
+			<p> BTS SIO | Lycée Pierre Poivre | Projet étudiant</p>
+			<p> </p>
+		</div>
+	</footer>
 
 </html>
