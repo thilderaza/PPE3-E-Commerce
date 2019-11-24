@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  sam. 23 nov. 2019 à 17:27
+-- Généré le :  Dim 24 nov. 2019 à 13:24
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -52,15 +52,23 @@ INSERT INTO `categorie` (`num_categ`, `nom_categ`) VALUES
 
 DROP TABLE IF EXISTS `client`;
 CREATE TABLE IF NOT EXISTS `client` (
-  `num_cli` int(3) NOT NULL,
+  `num_cli` int(3) NOT NULL AUTO_INCREMENT,
   `nom_cli` char(10) COLLATE utf8_unicode_ci DEFAULT NULL,
   `pnom_cli` char(10) COLLATE utf8_unicode_ci DEFAULT NULL,
   `age_cli` int(3) DEFAULT NULL,
   `mail_cli` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `mdp_cli` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `mdp_cli` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `adresse_cli` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`num_cli`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Déchargement des données de la table `client`
+--
+
+INSERT INTO `client` (`num_cli`, `nom_cli`, `pnom_cli`, `age_cli`, `mail_cli`, `mdp_cli`, `adresse_cli`) VALUES
+(4, 'Payet', 'Marie', 24, 'Payet.M@gmail.com', 'f02368945726d5fc2a14eb576f7276c0', NULL),
+(3, 'Dupond', 'Max', 21, 'Dupond.M@gmail.com', 'ab4f63f9ac65152575886860dde480a1', NULL);
 
 -- --------------------------------------------------------
 
@@ -196,7 +204,7 @@ CREATE TABLE IF NOT EXISTS `tbl_membre` (
   `mdp_mbr` varchar(255) NOT NULL DEFAULT '',
   `email_mbr` varchar(255) NOT NULL,
   PRIMARY KEY (`id_mbr`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `tbl_membre`
@@ -204,8 +212,7 @@ CREATE TABLE IF NOT EXISTS `tbl_membre` (
 
 INSERT INTO `tbl_membre` (`id_mbr`, `nom_mbr`, `afficher_util`, `mdp_mbr`, `email_mbr`) VALUES
 (2, 'btssio', 'Administrateur', '017fe3a523712ceba7cde169653316e9', 'btssio@lpp.re'),
-(3, 'Toto', 'Utilisateur', '1234', 'toto@google.re'),
-(4, 'Admin', 'Administrateur', 'azerty', 'Admin@lpp.re');
+(3, 'Admin', 'Administrateur', 'ab4f63f9ac65152575886860dde480a1', 'admin@gmail.com');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
