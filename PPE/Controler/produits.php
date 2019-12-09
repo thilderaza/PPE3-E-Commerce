@@ -38,15 +38,16 @@ class Produits extends DB {
 
   function setUpdate($tblemp){
 
-    $strSQL = "UPDATE produit SET nom_prod = UCASE(:nom), prix = UCASE(:prix), type_prod = :type, categ_prod = UCASE(:categ),descrip_prod = UCASE(:descrip_prod) WHERE num_prod = :num;";
+    $strSQL = "UPDATE produit SET nom_prod, prix , type_prod,
+               categ_prod,descrip_prod WHERE num_prod = ? ;";
 
     $tabValeur = array(
-      'nom_prod'  => $tblemp['nom'], 
+      'nom_prod'  => $tblemp['nom_prod'], 
       'prix'   => $tblemp['prix'], 
-      'type_prod'   => $tblemp['type'],
-      'categ_prod'   => $tblemp['categ'],
-      'descrip_prod'   => $tblemp['descrip'],
-      'num_prod'   => $tblemp['num'],
+      'type_prod'   => $tblemp['type_prod'],
+      'categ_prod'   => $tblemp['categ_prod'],
+      'descrip_prod'   => $tblemp['descrip_prod'],
+      'num_prod'   => $tblemp['ide'],
     );
     
     $upd = $this->Requete($strSQL, $tabValeur);
