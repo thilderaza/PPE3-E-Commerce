@@ -36,7 +36,7 @@ ob_start();
             echo "<form action='index.php?action=produit' method='POST'>";
             echo 
             "<tr>" 
-                ."<td>"."<input readonly type='text' name='num_prod' id='num_prod' value=".$produit['num_prod']."></td>" 
+                ."<td>"."<input readonly type='text' name='ide' id='ide' value=".$produit['num_prod']."></td>" 
                 ."<td>"."<input type='text' name='nom_prod' id='nom_prod' value=".$produit['nom_prod']."></td>" 
                 ."<td>"."<input type='text' name='prix' id='prix' value='".$produit['prix'] . "'></td>" 
                 ."<td>"."<input type='text' name='type_prod' id='type_prod' value='".$produit['type_prod'] . "'></td>" 
