@@ -4,9 +4,11 @@
   try {
     if (isset($_GET['action'])) 
     {
-
+      require "./Controler/produits.php";
+        $produit = new Produits();
       if ($_REQUEST['action'] == 'Supprimer') {
-        $produit->setDelete(intval($_POST['num_prod']));
+        
+        $produit->setDelete(intval($_POST['ide']));
       } 
 
       if ($_REQUEST['action'] == 'Ajouter') {
@@ -14,7 +16,7 @@
       } 
 
       if ($_REQUEST['action'] == 'Modifier') {
-        $_POST['num_prod']=intval($_POST['num_prod']);
+        $_POST['ide']=intval($_POST['ide']);
         $produit->setUpdate($_POST);
       } 
 
