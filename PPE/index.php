@@ -16,7 +16,6 @@
       } 
 
       if ($_REQUEST['action'] == 'Modifier') {
-        $_POST['ide']=intval($_POST['ide']);
         $produit->setUpdate($_POST);
       } 
 
