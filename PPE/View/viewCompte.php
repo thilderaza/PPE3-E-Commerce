@@ -1,4 +1,5 @@
 
+
 <?php
 if (!empty($_SESSION["userId"])) {
     require_once "./controler/membre.php";
@@ -36,7 +37,7 @@ ob_start();
             echo "<form action='index.php?action=produit' method='POST'>";
             echo 
             "<tr>" 
-                ."<td>"."<input readonly type='text' name='ide' id='ide' value=".$produit['num_prod']."></td>" 
+                ."<td>"."<input readonly type='text' name='num_prod' id='num_prod' value=".$produit['num_prod']."></td>" 
                 ."<td>"."<input type='text' name='nom_prod' id='nom_prod' value=".$produit['nom_prod']."></td>" 
                 ."<td>"."<input type='text' name='prix' id='prix' value='".$produit['prix'] . "'></td>" 
                 ."<td>"."<input type='text' name='type_prod' id='type_prod' value='".$produit['type_prod'] . "'></td>" 
@@ -51,6 +52,21 @@ ob_start();
         ?>
 	  	</table>
 </section>
+
+<article>
+        <h1>Ajouter un produit</h1>
+        <form action="index.php?action=Ajouter" method="post">
+          <input type="text" name="nom_prod" id="nom_prod" placeholder="Nom du produit"> <br><br>
+          <input type="numeric" name="prix" id="prix" placeholder="Prix du produit"><br><br>
+          <input type="text" name="type_prod" id="type_prod" placeholder="Type du produit"> <br><br>
+          <input type="text" name="categ_prod" id="categ_prod" placeholder="Catégorie produit"> <br><br>
+          <input type="text" name="descrip_prod" id="descrip_prod" placeholder="Description produit"> <br><br>
+          <input type="submit" name="action" value="Ajouter">
+          <br><br>
+          <br><br>
+        </form>
+</article>
+
 
 <?php 
 	$contenu = ob_get_clean();
