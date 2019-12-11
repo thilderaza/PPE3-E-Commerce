@@ -3,7 +3,7 @@ $titre = "Liseuses ";
 ob_start(); 
 ?>
 <article>
-	<section id="pageContent">
+	<section id="pageContent2">
 			<table>
 				<tr>
 					<th>Nom</th>
