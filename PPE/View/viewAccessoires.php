@@ -3,7 +3,7 @@ $titre = "Accessoires ";
 ob_start(); 
 ?>
 <article>
-	<section id="pageContent">
+	<section id="pageContent2">
 
 			<table>
 			<tr>
@@ -35,3 +35,4 @@ ob_start();
 	$contenu = ob_get_clean();
 	require 'template.php';
 ?>
+
