@@ -3,7 +3,7 @@ $titre = "Livres ";
 ob_start(); 
 ?>
 
-<section id="pageContent">
+<section id="pageContent2">
         <table>
            <tr>
 				<th>Nom</th>
