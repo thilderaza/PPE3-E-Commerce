@@ -204,13 +204,28 @@ body {
 
   
   #pageContent {
-    max-width: 1000px;
+    max-width: 1450px;
     margin: auto;
     border: none;
 
 }
+
+#pageContent2 {
+  max-width: 1000px;
+  margin: auto;
+  border: none;
+
+}
+
+#pageContent3 {
+  max-width: 500px;
+  min-width: 500px;
+  margin: auto;
+  border: none;
+
+}
 /*  Tableau d'affichage des différents produits*/
-table{width:100%; border-collapse:collapse; table-layout:auto; vertical-align:top; margin-bottom:15px; border:1px solid #CCCCCC;}
+table{width:100%; border-collapse:collapse; table-layout:auto; vertical-align:top; margin-bottom:55px; border:1px solid #CCCCCC;}
 table thead th{color:#FFFFFF; background-color:#666666; border:1px solid #CCCCCC; border-collapse:collapse; text-align:center; table-layout:auto; vertical-align:middle;}
 table thead th, table tbody td{padding:5px; border-collapse:collapse; }
 table tbody td{vertical-align:middle; border-collapse:collapse; border-left:1px solid #CCCCCC; border-right:1px solid #CCCCCC; }
@@ -218,4 +233,4 @@ table tbody tr:nth-child(odd){color:#666666; background-color:#F7F7F7;}
 table tbody tr:nth-child(even){color:#666666; background-color:#E8E8E8;}
 
 .table_annuaire{width:530px;}
-.table_annuaire input[type="text"] {width:150px;}
+.table_annuaire input[type="text"] {width:300px;}
