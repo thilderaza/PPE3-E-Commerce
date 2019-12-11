@@ -1,5 +1,4 @@
 
-
 <?php
 if (!empty($_SESSION["userId"])) {
     require_once "./controler/membre.php";
@@ -18,10 +17,10 @@ $titre = "Compte ";
 ob_start(); 
 ?>
 <h1> Liste des produits </h1>
-<section id="pageContent">
-        <table>
-           <tr>
-                <th> # </th>
+<section>
+      <table>
+      <tr>
+        <th> # </th>
 				<th>Nom</th>
 				<th>Prix</th>
 				<th>Type de produit</th>
